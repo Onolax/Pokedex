@@ -1,0 +1,359 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    text-align: center;
+  }
+  
+  .container {
+    width: 100%;
+    min-height: 100vh;
+    padding: 5%;
+    background-image: linear-gradient(rgba(250, 250, 208, 0.5), rgba(250, 250, 208, 0.5)), url(assets/wallpaper.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+  .search-bar {
+    width: 100%;
+    max-width: 50rem;
+    padding: 0.6rem 1.2rem;
+    border-radius: 4.5rem;
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(4px) saturate(120%);
+  }
+  
+  .search-bar input {
+    background: transparent;
+    flex: 1;
+    border: 0;
+    outline: none;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    color: black;
+  }
+  
+  ::placeholder {
+    color: #2D0320;
+  }
+  
+  .search-bar button img {
+    width: 2.5rem;
+  }
+  
+  .search-bar button {
+    border: 0;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    background-color: #FAF2B7;
+    cursor: pointer;
+  }
+  
+  .pokemon-details {
+    width: 100%;
+    border: 0;
+    border-radius: 30px;
+    max-width: 50rem;
+    display: flex;
+    align-items: center;
+    
+  }
+
+
+  /* Add these CSS classes to your existing styles.css */
+
+
+  
+  .pokemon-card {
+    background-color: #fff;
+    width: 100%;
+    max-width: 50rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s;
+  }
+  
+  .pokemon-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .pokemon-id {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: rgba(128, 128, 128, 0.2);
+    color: gray;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+  
+  .pokemon-image-container {
+    width: 100%;
+    height: 40%;
+    background-color: #f7f7f7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .pokemon-image-container img {
+    max-height: 100%;
+    max-width: 100%;
+  }
+  
+  .pokemon-info {
+    padding: 20px;
+    text-align: left;
+  }
+  
+  .pokemon-info h2 {
+    text-transform: capitalize;
+    margin: 0;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .pokemon-info p {
+    margin: 5px 0;
+    color: #555;
+  }
+  
+  .pokemon-info .types {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .pokemon-info .types span {
+    padding: 5px 10px;
+    border-radius: 15px;
+    margin:5px;
+    text-transform: capitalize;
+    font-size: 14px;
+  }
+  
+  .pokemon-info .evolutions {
+    margin-top: 10px;
+  }
+  
+  .pokemon-info .evolutions span {
+    text-transform: capitalize;
+    display: inline-block;
+    background-color: #ffcb05;
+    color: #3b4cca;
+    padding: 5px 10px;
+    border-radius: 15px;
+    margin-right: 5px;
+    margin-top: 5px;
+    font-size: 14px;
+  }
+  
+  .pokemon-stats {
+    padding: 20px;
+    border-top: 1px solid #ddd;
+  }
+  
+  .pokemon-stats h3 {
+    margin-top: 0;
+    color: #333;
+  }
+  
+  .pokemon-stats table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .pokemon-stats th, .pokemon-stats td {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+  }
+  
+  .pokemon-stats th {
+    background-color: #f5f5f5;
+    color: #333;
+  }
+  
+  .error {
+    color: red;
+    font-weight: bold;
+  }
+
+  /* Normal */
+.type-normal {
+    background-color: #A8A77A;
+    color: white;
+  }
+  
+  /* Fire */
+  .type-fire {
+    background-color: #EE8130;
+    color: white;
+  }
+  
+  /* Water */
+  .type-water {
+    background-color: #6390F0;
+    color: white;
+  }
+  
+  /* Electric */
+  .type-electric {
+    background-color: #F7D02C;
+    color: white;
+  }
+  
+  /* Grass */
+  .type-grass {
+    background-color: #7AC74C;
+    color: white;
+  }
+  
+  /* Ice */
+  .type-ice {
+    background-color: #96D9D6;
+    color: white;
+  }
+  
+  /* Fighting */
+  .type-fighting {
+    background-color: #C22E28;
+    color: white;
+  }
+  
+  /* Poison */
+  .type-poison {
+    background-color: #A33EA1;
+    color: white;
+  }
+  
+  /* Ground */
+  .type-ground {
+    background-color: #E2BF65;
+    color: white;
+  }
+  
+  /* Flying */
+  .type-flying {
+    background-color: #A98FF3;
+    color: white;
+  }
+  
+  /* Psychic */
+  .type-psychic {
+    background-color: #F95587;
+    color: white;
+  }
+  
+  /* Bug */
+  .type-bug {
+    background-color: #A6B91A;
+    color: white;
+  }
+  
+  /* Rock */
+  .type-rock {
+    background-color: #B6A136;
+    color: white;
+  }
+  
+  /* Ghost */
+  .type-ghost {
+    background-color: #735797;
+    color: white;
+  }
+  
+  /* Dark */
+  .type-dark {
+    background-color: #705746;
+    color: white;
+  }
+  
+  /* Dragon */
+  .type-dragon {
+    background-color: #6F35FC;
+    color: white;
+  }
+  
+  /* Steel */
+  .type-steel {
+    background-color: #B7B7CE;
+    color: white;
+  }
+
+  /* Default Type Style */
+.type-default {
+    background-color: #777;
+    color: white;
+  }
+  
+  
+  /* Fairy */
+  .type-fairy {
+    background-color: #D685AD;
+    color: white;
+  }
+
+  .evolution-container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 10px;
+  }
+  
+  /* Evolution Image */
+  .evolution-image {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    border-radius: 10px;
+    border: 2px solid #ddd;
+    margin-right: 10px;
+  }
+  
+  /* Evolution Name */
+  .evolution-name {
+    font-weight: bold;
+    text-transform: capitalize;
+    margin-right: 20px;
+    /* min-width: 80px; */
+  }
+  
+  /* Evolution Arrow */
+  .evolution-arrow {
+    font-size: 24px;
+    color: #333;
+    margin-right: 10px;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 600px) {
+    .evolution-container {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .evolution-arrow {
+      display: none; /* Hide arrows on small screens for better layout */
+    }
+  
+    .evolution-name {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  
+    .evolution-image {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  }
